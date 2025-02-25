@@ -2441,6 +2441,10 @@
     `;
 
     document.getElementById('generate-btn').addEventListener('click', function() {
+        caches.open('my-cache').then(cache => {
+            cache.delete('/my-cached-url'); // Данные устарели, нужно с ними попрощаться 👋
+        });
+        
         document.getElementById('output-text').value = '';
         fetchRequest();
         
