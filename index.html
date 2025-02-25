@@ -2512,7 +2512,7 @@
                 }
                 return response.json();
             }).then(function(choices) {
-                document.getElementById('output-text').value = choices["choices"][0]["message"]["content"];
+                document.getElementById('output-text').value = choices["choices"][0]["message"]["content"].replace('**', '💜') + '/n/n#МЭИ #ПБИЭЭ #ИЭЭ #ПБ_ЭТО_ЛЮДИ #ЛУЧШИЙВМЭИ';
                 clearInterval(timerInterval);
             });
         });
